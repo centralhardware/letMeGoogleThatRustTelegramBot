@@ -1,10 +1,9 @@
 use teloxide::{
     prelude::*,
     types::{
-        InlineQueryResult, InlineQueryResultArticle, InputMessageContent, InputMessageContentText,
+        InlineQueryResult, InlineQueryResultArticle, InputMessageContent, InputMessageContentText, LinkPreviewOptions, ParseMode
     },
 };
-use teloxide::types::{LinkPreviewOptions, ParseMode};
 use urlencoding::encode;
 
 #[tokio::main]
