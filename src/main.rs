@@ -52,7 +52,7 @@ fn get_articles(query: String) -> Vec<InlineQueryResult> {
         .map(|(i, (name, url))|
             get_article(i.to_string(),
                         name.to_string(),
-                        get_html_link(&format!("{}{}", url, encode(&query)), &query)),
+                        get_html_link(&format!("{}{}", url, encode(&query)), &query),
                         get_icon_url(name))
         )
         .collect()
