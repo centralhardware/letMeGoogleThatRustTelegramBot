@@ -19,7 +19,7 @@ async fn main() {
 
             let results = if q.query.is_empty() {
                 vec![
-                    get_article("1".to_string(), "shrugs".to_string(), "\\_(ツ)_/¯".to_string(), "".to_string()),
+                    get_article("1".to_string(), "shrugs".to_string(), "<code>\\_(ツ)_/¯</code>".to_string(), "".to_string()),
                     get_article("2".to_string(), "nometa".to_string(), "nometa.xyz".to_string(), "".to_string()),
                     get_article("3".to_string(), "How do I ask a good question?".to_string(), "https://stackoverflow.com/help/how-to-ask".to_string(), "".to_string()),
                     get_article("4".to_string(), "use pastebin".to_string(), "Use pastebin.com or gist.github.com to share code or long text.".to_string(), "".to_string())
