@@ -1,3 +1,6 @@
+use std::sync::Arc;
+use std::time::Instant;
+
 use teloxide::{
     payloads::AnswerInlineQuery,
     prelude::*,
@@ -6,6 +9,8 @@ use teloxide::{
     },
 };
 use urlencoding::encode;
+
+mod logging;
 
 use crate::logging::{Logger, UpdateContext};
 

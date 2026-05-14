@@ -107,7 +107,7 @@ impl Logger {
         };
 
         let result = async {
-            let mut insert = self.client.insert::<BotRequest<'_>>("bot_requests").await?;
+            let mut insert = self.client.insert::<BotRequest<'_>>("bot_requests")?;
             insert.write(&row).await?;
             insert.end().await
         }
