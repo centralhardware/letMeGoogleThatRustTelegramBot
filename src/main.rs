@@ -10,6 +10,7 @@ use teloxide::{
 };
 use urlencoding::encode;
 
+mod health;
 mod logging;
 
 use crate::logging::{Logger, UpdateContext};
@@ -20,6 +21,7 @@ async fn main() {
     log::info!("starting up");
 
     let bot = Bot::from_env();
+    health::start(bot.clone());
     let logger = Logger::from_env().map(Arc::new);
     if logger.is_some() {
         log::info!("ClickHouse logging enabled");
