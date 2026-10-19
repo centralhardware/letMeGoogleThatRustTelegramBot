@@ -51,7 +51,8 @@ pub struct Logger {
 impl Logger {
     pub fn from_env() -> Option<Self> {
         let url = std::env::var("CLICKHOUSE_URL").ok()?;
-        let bot_name = std::env::var("BOT_NAME").unwrap_or_else(|_| "letmegooglethatbot".to_string());
+        let bot_name =
+            std::env::var("BOT_NAME").unwrap_or_else(|_| "letmegooglethatbot".to_string());
 
         let mut client = Client::default().with_url(url);
         if let Ok(u) = std::env::var("CLICKHOUSE_USER") {
@@ -80,6 +81,7 @@ impl Logger {
         }
     }
 
+    #[allow(clippy::too_many_arguments)]
     pub async fn write(
         &self,
         ctx: &UpdateContext,

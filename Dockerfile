@@ -10,7 +10,7 @@ FROM debian:bookworm-slim
 
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates && rm -rf /var/lib/apt/lists/*
 
-COPY --from=builder /app/target/release/untitled /app/untitled
+COPY --from=builder /app/target/release/let_me_google_that_bot /app/let_me_google_that_bot
 
 USER 10001
 
@@ -19,4 +19,4 @@ USER 10001
 HEALTHCHECK --interval=30s --timeout=5s --start-period=60s --retries=3 \
   CMD [ -f /tmp/health ] && [ $(( $(date +%s) - $(stat -c %Y /tmp/health) )) -lt 120 ]
 
-ENTRYPOINT ["/app/untitled"]
+ENTRYPOINT ["/app/let_me_google_that_bot"]
