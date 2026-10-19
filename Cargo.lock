@@ -933,6 +933,21 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "09edd9e8b54e49e587e4f6295a7d29c3ea94d469cb40ab8ca70b288248a81db2"
 
 [[package]]
+name = "let_me_google_that_bot"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "clickhouse",
+ "log",
+ "pretty_env_logger",
+ "serde",
+ "serde_json",
+ "teloxide",
+ "tokio",
+ "urlencoding",
+]
+
+[[package]]
 name = "libc"
 version = "0.2.185"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1959,21 +1974,6 @@ name = "unicode-xid"
 version = "0.2.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ebc1c04c71510c7f702b52b7c350734c9ff1295c464a03335b00bb84fc54f853"
-
-[[package]]
-name = "untitled"
-version = "0.1.0"
-dependencies = [
- "chrono",
- "clickhouse",
- "log",
- "pretty_env_logger",
- "serde",
- "serde_json",
- "teloxide",
- "tokio",
- "urlencoding",
-]
 
 [[package]]
 name = "url"
