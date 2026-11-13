@@ -7,7 +7,7 @@ edition = "2024"
 teloxide = { version = "0.17.0", features = ["macros"] }
 log = "0.4"
 pretty_env_logger = "0.5"
-tokio = { version =  "1.52", features = ["rt-multi-thread", "macros"] }
+tokio = { version =  "1.54", features = ["rt-multi-thread", "macros"] }
 urlencoding = "2"
 clickhouse = { version = "0.15", features = ["chrono"] }
 chrono = { version = "0.4", features = ["serde"] }
